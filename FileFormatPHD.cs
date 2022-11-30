@@ -410,7 +410,8 @@ namespace TR1GlidosDump
                 {
                     //Copy Palette
                     ColorPalette pal = bm.Palette;
-                    for (int i = 0; i < 256; ++i)
+                    pal.Entries[0] = Color.FromArgb(0, palette[0].r, palette[0].g, palette[0].b);
+                    for (int i = 1; i < 256; ++i)
                     {
                         pal.Entries[i] = Color.FromArgb(255, palette[i].r, palette[i].g, palette[i].b);
                     }
@@ -453,7 +454,9 @@ namespace TR1GlidosDump
                 {
                     //Copy Palette
                     ColorPalette pal = bm.Palette;
-                    for (int i = 0; i < 256; ++i)
+                    pal.Entries[0] = Color.FromArgb(0, palette[0].r, palette[0].g, palette[0].b);
+
+                    for (int i = 1; i < 256; ++i)
                     {
                         pal.Entries[i] = Color.FromArgb(255, palette[i].r, palette[i].g, palette[i].b);
                     }
